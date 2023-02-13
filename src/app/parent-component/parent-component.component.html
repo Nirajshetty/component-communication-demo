@@ -1,0 +1,24 @@
+<div class='card'>
+    <div class='card-header'>
+        {{pageTitle}}
+    </div>
+    <div class='card-body'>
+
+        <input type="text" #parentData/>
+
+        &nbsp;
+        <button 
+            (click)="onClick(parentData.value)">
+            Send
+        </button>
+
+        <p>From Child: {{childData}}</p>
+
+        <app-child-component 
+            [parentDataInChild]='parentDataOnClick' 
+            (childClicked)="displayChildData($event)">
+        </app-child-component>
+        
+
+    </div>
+</div>
