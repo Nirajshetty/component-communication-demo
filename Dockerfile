@@ -5,4 +5,4 @@ RUN npm install
 RUN npm run build  --prod
  
 FROM nginx:alpine
-COPY --from=node /app/dist/docker-demo /usr/share/nginx/html
+COPY --from=node /app/dist/component-communication-demo /usr/share/nginx/html
